@@ -1,20 +1,19 @@
 <div ng-controller="MovieController as ctrl">
-    <h2>Books</h2>
-    Filter Books <input type="text" ng-model="movieFilter.Title">
+    <h2>Movies</h2>
+    Filter Movies by title <input type="text" ng-model="movieFilter.Title">
+    <br>
+    Filter Movies by director <input type="text" ng-model="movieFilter.Director">
     <br/>
     <table>
         <tr>
-            <th>Author</th>
+            <th>Director</th>
             <th ng-click="ctrl.doSort()">Title</th>
-            <th>Genre</th>
-            <th>Published</th>
         </tr>
         <tr ng-repeat="movie in ctrl.movies | filter:movieFilter | orderBy:ctrl.sortBy:ctrl.reverse">
             <td>{{movie.Director | uppercase}}</td>
-            <td>{{movie.Title | lowercase}}</td>
+            <td>{{movie.Title | uppercase}}</td>
         </tr>
+        <br>
     </table>
-
-    <span>Total books: {{ctrl.movies.length}}</span>
-    <a ui-sref="other">Activate Other State</a>
+    <span>Total Movies: {{ctrl.movies.length}}</span>
 </div>

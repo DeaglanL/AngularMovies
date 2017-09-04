@@ -7,7 +7,7 @@
 
         $stateProvider.state("movie", {
             url: "/movie",
-            templateUrl: "app/feature/movies    /movie.html"
+            templateUrl: "app/movie/movie.html"
         }).state("other", {
                 url: "/dashboard",
                 templateUrl: "app/feature/dashboard/dashboard.html"

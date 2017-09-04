@@ -1,1 +1,1 @@
-var demoApp = angular.module('mov',[]);
+var demoApp = angular.module('mov',['ui.router']);
